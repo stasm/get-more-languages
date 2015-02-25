@@ -1,12 +1,14 @@
-document.getElementById('install-fr-2.2').onclick = function() {
-  install(window.location.origin + '/langpacks/2.2/fr.webapp');
-};
+var buttons = document.querySelectorAll('li');
 
-document.getElementById('install-fr-3.0').onclick = function() {
-  install(window.location.origin + '/langpacks/3.0/fr.webapp');
-};
+Array.prototype.forEach.call(buttons, function(elem) {
+  elem.addEventListener('click', install);
+});
 
-function install(manifestUrl) {
+function install() {
+  var manifestUrl =
+    window.location.origin + '/langpacks/' +
+    this.dataset.version + '/' +
+    this.dataset.lang + '.webapp';
   var req = navigator.mozApps.installPackage(manifestUrl);
   req.onerror = function() {
     alert(this.error.name);
