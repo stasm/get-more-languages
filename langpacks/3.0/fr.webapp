@@ -1,0 +1,19 @@
+{
+  "name": "French Language Pack",
+  "icons": {
+    "128": "/icon.png"
+  },
+  "version": "1.0.0",
+  "package_path": "http://get-more-languages.informationisart.com/langpacks/3.0/fr.zip",
+  "size": 340074,
+  "locales": {
+    "fr": {
+      "name": "Paquetage linguistique fran\u00e7ais",
+      "description": "Paquetage assurant la traduction de Firefox OS en fran\u00e7ais."
+    }
+  },
+  "developer": {
+    "url": "http://www.mozilla.org",
+    "name": "Mozilla"
+  }
+}
